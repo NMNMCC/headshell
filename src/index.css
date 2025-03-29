@@ -1,0 +1,13 @@
+@import "tailwindcss";
+
+* {
+    @apply box-border!;
+}
+
+.font-mono {
+    font-family: "Roboto Mono Variable", monospace;
+}
+
+body {
+    @apply w-full h-dvh flex flex-col items-center justify-start;
+}
