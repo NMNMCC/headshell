@@ -1,0 +1,24 @@
+---
+description: 
+globs: 
+alwaysApply: true
+---
+After writing each code, please check whether your code strictly complies with the following code style requirements:
+
+# Code Styles
+
+- When providing chat responses, please use Simplified Chinese. For code output, documents, and any in-code or document comments, please use American English
+- DON'T WORRY ABOUT "BEST PRACTICES" OR ANYTHING LIKE THAT
+- Always use underscores in variable naming style instead of the popular camel case naming style
+- Always use `type` instead of `interface`
+- Don't add type annotations if the type can be inferred automatically
+- Don’t create new variables, named handlers, or type aliases unless you need to use them in multiple places
+- Use object and array destructors to extract elements whenever possible
+- Unless it is absolutely necessary, do not use `let`, use `const` instead
+- Keep the code concise and extensible
+- Use functional programming style appropriately
+- Do not mechanically copy other UI styles: when writing UI code, please carefully understand the existing UI code and follow the existing UI style
+- Don’t use margins unless absolutely necessary, use padding instead
+
+
+

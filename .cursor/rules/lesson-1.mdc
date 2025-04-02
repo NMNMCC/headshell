@@ -1,0 +1,25 @@
+---
+description: 
+globs: 
+alwaysApply: true
+---
+
+1. Deep Analysis Before Imitation:
+Don't just copy the surface-level structure
+Carefully examine how existing components handle their styles, especially the relationship between parent and child elements
+Look for patterns in how other components solve similar problems
+
+2. Understanding Component Hierarchy:
+Pay attention to which element (parent or child) should bear the styling responsibility
+In this case, we learned that the form element should handle the padding, not the container
+This pattern likely exists for a reason in the codebase
+
+3. Pattern Recognition:
+When multiple components in the same directory share similar patterns, it's likely intentional
+The consistent use of p-2 on form elements across Tag, Move, and Rename wasn't a coincidence
+Such patterns often reflect architectural decisions or design principles
+
+4. Avoiding Assumptions:
+Don't assume that adding more styling will improve the component
+Sometimes, less is more, and the existing patterns have been carefully considered
+The simpler solution (single p-2 on form) was the correct one
