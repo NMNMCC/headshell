@@ -21,8 +21,8 @@ export const ActionButton = ({
             {...others}
             href={path}
             onClick={action}
-            class={`transition-colors text-gray-600 decoration-gray-400 hover:text-gray-800 hover:decoration-gray-600 hover:underline hover:underline-offset-2 hover:cursor-pointer ${
-                disabled ? "opacity-50 pointer-events-none" : ""
+            class={`text-gray-600 decoration-gray-400 transition-colors hover:cursor-pointer hover:text-gray-800 hover:underline hover:decoration-gray-600 hover:underline-offset-2 ${
+                disabled ? "pointer-events-none opacity-50" : ""
             } ${size === "sm" ? "text-sm" : size === "md" ? "text-base" : "text-lg"} ${_className} ${className}`}
         >
             {name}

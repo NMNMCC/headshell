@@ -30,6 +30,7 @@
         "@preact/preset-vite": "^2.9.3",
         "@types/node": "^22.13.14",
         "prettier": "^3.5.3",
+        "prettier-plugin-tailwindcss": "^0.6.11",
         "typescript": "^5.8.2",
         "vite": "^6.0.4"
     }

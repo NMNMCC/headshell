@@ -11,9 +11,9 @@ export const DataTable = ({
     selected_rows: Signal<number[]>;
 }) => {
     return (
-        <div class="w-full h-full bg-gray-50 overflow-auto">
+        <div class="h-full w-full overflow-auto bg-gray-50">
             <table class="w-full table-auto">
-                <thead class="text-left bg-gray-100">
+                <thead class="bg-gray-100 text-left">
                     <tr class="border-b border-gray-200">
                         <th class="w-10 p-2">
                             <input

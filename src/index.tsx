@@ -3,7 +3,7 @@ import "@fontsource/inter";
 import "@fontsource-variable/roboto-mono";
 
 import { render } from "preact";
-import { LocationProvider, Route, Router, useLocation } from "preact-iso";
+import { LocationProvider, Route, Router } from "preact-iso";
 import { CssVarsProvider } from "@mui/joy/styles/CssVarsProvider";
 
 import { Header } from "./components/base/Header";
@@ -15,7 +15,6 @@ import { Detail as NodeDetail } from "./pages/nodes/Detail";
 import { Main as UserMain } from "./pages/users/Main";
 import { Create as UserCreate } from "./pages/users/Create";
 import { Detail as UserDetail } from "./pages/users/Detail";
-
 import { Fallback } from "./pages/Fallback";
 
 export function App() {
@@ -23,7 +22,7 @@ export function App() {
         <LocationProvider>
             <CssVarsProvider>
                 <Header />
-                <div class="w-full h-full flex flex-col items-center justify-center p-8">
+                <div class="flex h-full w-full flex-col items-center justify-center p-8">
                     <Router>
                         <Route path="/" component={Home} />
                         <Route path="/auth" component={Auth} />

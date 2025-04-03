@@ -52,7 +52,7 @@ export const Register: AnyComponent = () => {
                 />
                 <select
                     name="user"
-                    class="w-64 p-2 font-mono text-sm bg-gray-50 hover:bg-gray-100 hover:outline-none! focus:outline-none!"
+                    class="w-64 bg-gray-50 p-2 font-mono text-sm hover:bg-gray-100 hover:outline-none! focus:outline-none!"
                 >
                     {filtered_users.value?.map((user) => (
                         <option key={user.id} value={user.id}>

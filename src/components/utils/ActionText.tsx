@@ -10,7 +10,7 @@ type ActionComponentProps = {
 export const ActionText = ({ name, placeholder, oninput, onsubmit }: ActionComponentProps) => {
     return (
         <form
-            class="flex flex-row items-center px-4 py-2 gap-2"
+            class="flex flex-row items-center gap-2 px-4 py-2"
             onSubmit={(e) => {
                 e.preventDefault();
                 onsubmit?.(e);
@@ -21,7 +21,7 @@ export const ActionText = ({ name, placeholder, oninput, onsubmit }: ActionCompo
                 <input type="submit" value={name} class={onsubmit && "clickable"}></input>:
             </span>
             <input
-                class="w-full line-clamp-1"
+                class="line-clamp-1 w-full"
                 onInput={oninput}
                 placeholder={placeholder}
                 name="input"

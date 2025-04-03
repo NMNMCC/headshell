@@ -23,9 +23,9 @@ export const Header = () => {
             style={{
                 background: `linear-gradient(to left, ${auth.value ? "lightgreen" : "#FFCCCB"}, #f3f4f6 50%)`,
             }}
-            class="w-full h-fit px-8 py-4 flex flex-col gap-2"
+            class="flex h-fit w-full flex-col gap-2 px-8 py-4"
         >
-            <div className="**:text-lg flex flex-row gap-4">
+            <div className="flex flex-row gap-4 **:text-lg">
                 <ActionButton name="HeadShell" path="/" className="font-black! text-black!"></ActionButton>
                 {location.path
                     .split("/")
