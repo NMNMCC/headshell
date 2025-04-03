@@ -7,7 +7,7 @@ import { LocationProvider, Route, Router, useLocation } from "preact-iso";
 import { CssVarsProvider } from "@mui/joy/styles/CssVarsProvider";
 
 import { Header } from "./components/base/Header";
-// import { Home } from "./pages/Home";
+import { Home } from "./pages/Home";
 import { Auth } from "./pages/Auth";
 import { Main as NodeMain } from "./pages/nodes/Main";
 import { Register as NodeRegister } from "./pages/nodes/Register";
@@ -25,15 +25,7 @@ export function App() {
                 <Header />
                 <div class="w-full h-full flex flex-col items-center justify-center p-8">
                     <Router>
-                        <Route
-                            path="/"
-                            component={() => {
-                                const location = useLocation();
-                                location.route("/nodes");
-
-                                return undefined;
-                            }}
-                        />
+                        <Route path="/" component={Home} />
                         <Route path="/auth" component={Auth} />
                         <Route path="/nodes" component={NodeMain} />
                         <Route path="/nodes/register" component={NodeRegister} />

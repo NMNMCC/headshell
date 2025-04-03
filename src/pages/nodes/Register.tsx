@@ -6,7 +6,7 @@ import { useEffect } from "preact/compat";
 import { useComputed, useSignal } from "@preact/signals";
 import { nodes_handler } from "../../handlers/nodes";
 import { users_ids, users_types } from "../../handlers/users";
-import { StyledInput } from "../../components/common/StyledInput";
+import { StyledInput } from "../../components/utils/StyledInput";
 
 export const Register: AnyComponent = () => {
     const search = useSignal("");

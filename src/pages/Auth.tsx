@@ -34,7 +34,6 @@ export const Auth: AnyComponent = () => {
             ];
         }
     });
-
     if (auth.value) {
         return <>Login as {auth.value?.username}</>;
     } else {

@@ -3,7 +3,7 @@ import { entries } from "../../components/base/Header";
 import { Typography, FormControl, FormLabel } from "@mui/joy";
 import { useEffect } from "preact/compat";
 import { users_handler } from "../../handlers/users";
-import { StyledInput } from "../../components/common/StyledInput";
+import { StyledInput } from "../../components/utils/StyledInput";
 
 export const Create: AnyComponent = () => {
     useEffect(() => {

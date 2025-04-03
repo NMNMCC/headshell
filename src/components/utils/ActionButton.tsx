@@ -1,7 +1,6 @@
 import { ComponentProps } from "preact";
-import { value, Value } from "../../utils/value";
 
-export const Action = ({
+export const ActionButton = ({
     name,
     path,
     action,
@@ -14,7 +13,7 @@ export const Action = ({
     size: "sm" | "md" | "lg";
     path: string;
     action: () => void;
-    disabled: Value<boolean>;
+    disabled: boolean;
 }> &
     ComponentProps<"a">) => {
     return (
@@ -23,7 +22,7 @@ export const Action = ({
             href={path}
             onClick={action}
             class={`transition-colors text-gray-600 decoration-gray-400 hover:text-gray-800 hover:decoration-gray-600 hover:underline hover:underline-offset-2 hover:cursor-pointer ${
-                value(disabled) ? "opacity-50 pointer-events-none" : ""
+                disabled ? "opacity-50 pointer-events-none" : ""
             } ${size === "sm" ? "text-sm" : size === "md" ? "text-base" : "text-lg"} ${_className} ${className}`}
         >
             {name}

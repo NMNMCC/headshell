@@ -24,7 +24,14 @@ export type users_types = {
 export const users_handler = {
     list: () => exec<users_types["list"]>(users_ids.list, ["users", "list"]),
     create: (name: string) => exec<users_types["create"]>(users_ids.create, ["users", "create", name]),
-    destroy: (name: string) => exec<users_types["destroy"]>(users_ids.destroy, ["users", "destroy", name]),
+    destroy: (identifier: number) =>
+        exec<users_types["destroy"]>(users_ids.destroy, [
+            "users",
+            "destroy",
+            "--identifier",
+            identifier.toString(),
+            "--force",
+        ]),
     rename: (old_name: string, new_name: string) =>
         exec<users_types["rename"]>(users_ids.rename, ["users", "rename", old_name, new_name]),
 };

@@ -1,7 +1,7 @@
 import { signal } from "@preact/signals";
 import { useLocation } from "preact-iso";
 import { get_auth } from "../../stores/store";
-import { Action } from "../utils/Action";
+import { ActionButton } from "../utils/ActionButton";
 
 export const entries = signal<
     ({ name: string } & (
@@ -26,14 +26,18 @@ export const Header = () => {
             class="w-full h-fit px-8 py-4 flex flex-col gap-2"
         >
             <div className="**:text-lg flex flex-row gap-4">
-                <Action name="HeadShell" path="/" className="font-black! text-black!"></Action>
+                <ActionButton name="HeadShell" path="/" className="font-black! text-black!"></ActionButton>
                 {location.path
                     .split("/")
                     .filter(Boolean)
                     .map((cur, index, array) => (
                         <>
                             {index === 0 ? <span>/</span> : undefined}
-                            <Action name={cur} path={`/${array.slice(0, index + 1).join("/")}`} class="capitalize" />
+                            <ActionButton
+                                name={cur}
+                                path={`/${array.slice(0, index + 1).join("/")}`}
+                                class="capitalize"
+                            />
                             {index !== array.length - 1 ? <span>/</span> : undefined}
                         </>
                     ))}
@@ -41,7 +45,7 @@ export const Header = () => {
             <div class="flex flex-row justify-between **:text-sm!">
                 <div class="flex flex-row gap-2">
                     {entries.value.map((entry) => (
-                        <Action
+                        <ActionButton
                             name={entry.name}
                             {...("path" in entry
                                 ? {
@@ -50,11 +54,11 @@ export const Header = () => {
                                 : {
                                       action: entry.action,
                                   })}
-                        ></Action>
+                        ></ActionButton>
                     ))}
                 </div>
                 <div>
-                    <Action name="Auth" path="/auth"></Action>
+                    <ActionButton name="Auth" path="/auth"></ActionButton>
                 </div>
             </div>
         </header>

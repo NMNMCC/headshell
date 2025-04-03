@@ -12,6 +12,13 @@ export const set = <V>(key: string, value: V): Signal<V> => {
     const _ = signals.get(key) ?? signal(value);
     _.value = value;
 
+    if (key.split("/")[1] !== "list") {
+        nodes_handler.list();
+        users_handler.list();
+        routes_handler.list();
+        apikeys_handler.list();
+    }
+
     signals.set(key, _);
 
     return _;

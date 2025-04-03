@@ -13,6 +13,7 @@
             "react": ["./node_modules/preact/compat/"],
             "react-dom": ["./node_modules/preact/compat/"]
         },
+
         /* Type Checking */
         "strict": true /* Enable all strict type-checking options. */,
         "noImplicitAny": true /* Enable error reporting for expressions and declarations with an implied 'any' type. */,
@@ -33,7 +34,8 @@
         "noImplicitOverride": true /* Ensure overriding members in derived classes are marked with an override modifier. */,
         "noPropertyAccessFromIndexSignature": true /* Enforces using indexed accessors for keys declared using an indexed type. */,
         "allowUnusedLabels": true /* Disable error reporting for unused labels. */,
-        "allowUnreachableCode": true /* Disable error reporting for unreachable code. */
+        "allowUnreachableCode": true /* Disable error reporting for unreachable code. */,
+        "skipDefaultLibCheck": true
     },
     "include": ["node_modules/vite/client.d.ts", "**/*"]
 }
