@@ -3,16 +3,8 @@ import { entries } from "../components/base/Header";
 import { get_auth, set_auth } from "../stores/store";
 import { Typography, FormControl, FormLabel } from "@mui/joy";
 import { test } from "../handlers/base";
-import { ComponentPropsWithoutRef } from "preact/compat";
 import { useSignalEffect } from "@preact/signals";
-
-const StyledInput = (props: ComponentPropsWithoutRef<"input">) => (
-    <input
-        class="w-64 bg-gray-50 p-2 font-mono text-sm hover:bg-gray-100 hover:outline-none! focus:outline-none!"
-        {...props}
-        required
-    ></input>
-);
+import { StyledInput } from "../components/utils/StyledInput";
 
 export const Auth: AnyComponent = () => {
     const auth = get_auth();
